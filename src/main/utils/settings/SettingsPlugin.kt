@@ -32,10 +32,10 @@ class SettingsPlugin : Plugin<Settings> {
     target.the<GitHooksExtension>().apply {
       commitMsg { conventionalCommits() }
       preCommit {
-        tasks("detekt --auto-correct")
+        tasks("detektAll --auto-correct")
       }
       hook("pre-push") {
-        tasks("detekt")
+        tasks("detektAll")
       }
       createHooks(overwriteExisting = true)
     }

@@ -42,6 +42,7 @@ dependencies {
   implementation(libs.plugin.kotlin.serialization)
   implementation(libs.plugin.versions)
   implementation(libs.plugin.versions.update)
+  implementation(libs.plugin.android.library)
 }
 
 buildConfig {

@@ -2,15 +2,8 @@ config:
   warningsAsErrors: true
 
 complexity:
-  LongMethod:
-    ignoreAnnotated:
-      - Showcase
-  TooManyFunctions:
-    ignoreAnnotated:
-      - MDCExternalAPI
   LongParameterList:
     ignoreAnnotated:
-      - MDCDsl
       - Composable
 
 comments:
