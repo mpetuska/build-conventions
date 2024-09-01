@@ -1,6 +1,7 @@
-import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
+import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 
 plugins {
+  id("kmp")
   id("kmp-android")
 }
 
@@ -12,12 +13,12 @@ kotlin {
     browser()
     nodejs()
   }
-//  wasmJs {
-//    browser()
-//  }
-//  wasmWasi {
-//    nodejs()
-//  }
+  wasmJs {
+    browser()
+  }
+  wasmWasi {
+    nodejs()
+  }
   macosX64()
   macosArm64()
   iosSimulatorArm64()

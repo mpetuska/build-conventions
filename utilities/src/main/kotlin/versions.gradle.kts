@@ -7,9 +7,9 @@ plugins {
 
 versionCatalogUpdate {
   keep {
-    keepUnusedVersions = true
-    keepUnusedLibraries = true
-    keepUnusedPlugins = true
+    keepUnusedVersions = false
+    keepUnusedLibraries = false
+    keepUnusedPlugins = false
   }
 }
 

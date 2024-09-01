@@ -1,5 +1,3 @@
-package settings
-
 import com.gradle.develocity.agent.gradle.DevelocityConfiguration
 import com.gradle.develocity.agent.gradle.DevelocityPlugin
 import org.danilopianini.gradle.git.hooks.GitHooksExtension
@@ -18,7 +16,6 @@ class SettingsPlugin : Plugin<Settings> {
     target.dependencyResolutionManagement {
       @Suppress("UnstableApiUsage")
       repositories {
-        google()
         mavenCentral()
       }
     }

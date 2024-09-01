@@ -1,56 +1,29 @@
+import io.gitlab.arturbosch.detekt.Detekt
+
 plugins {
-  `kotlin-dsl`
+  `kotlin-dsl` apply false
+  `embedded-kotlin` apply false
   alias(libs.plugins.versions)
   alias(libs.plugins.versions.update)
-  alias(libs.plugins.build.konfig)
-}
-
-repositories {
-  gradlePluginPortal()
-  google()
-  mavenCentral()
+  alias(libs.plugins.detekt)
 }
 
 versionCatalogUpdate {
   keep {
     keepUnusedVersions = true
     keepUnusedLibraries = true
-    keepUnusedPlugins = true
-  }
-}
-
-sourceSets {
-  main {
-    kotlin.srcDir(projectDir.resolve("src/main/utils"))
-  }
-}
-
-gradlePlugin {
-  plugins {
-    create("settings") {
-      id = "settings"
-      implementationClass = "settings.SettingsPlugin"
-    }
+    keepUnusedPlugins = false
   }
 }
 
 dependencies {
-  implementation(libs.plugin.git.hooks)
-  implementation(libs.plugin.develocity)
-  implementation(libs.plugin.detekt)
-  implementation(libs.plugin.kotlin)
-  implementation(libs.plugin.kotlin.serialization)
-  implementation(libs.plugin.versions)
-  implementation(libs.plugin.versions.update)
-  implementation(libs.plugin.android.library)
+  detektPlugins(libs.detekt.formatting)
 }
 
-buildConfig {
-  useKotlinOutput {
-    internalVisibility = true
-  }
-  packageName("utils")
-  forClass("Libs") {
-    buildConfigField("detektFormatting", libs.detekt.formatting.map(MinimalExternalModuleDependency::toString))
+tasks {
+  withType<Detekt> {
+    config.from(rootDir.resolve("gradle/detekt.yml"))
+    parallel = true
+    buildUponDefaultConfig = true
   }
 }
