@@ -9,8 +9,8 @@ repositories {
 }
 
 dependencies {
+  implementation(rootProject)
   implementation(project(":android"))
   implementation(project(":kotlin"))
-  implementation(project(":utils"))
   implementation(libs.plugin.kotlin)
 }

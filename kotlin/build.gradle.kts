@@ -9,7 +9,7 @@ repositories {
 }
 
 dependencies {
-  implementation(project(":utils"))
+  implementation(rootProject)
   implementation(libs.plugin.kotlin)
   implementation(libs.plugin.kotlin.serialization)
   implementation(libs.plugin.ksp)

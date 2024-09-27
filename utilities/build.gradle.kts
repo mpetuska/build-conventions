@@ -9,10 +9,12 @@ repositories {
 }
 
 dependencies {
-  implementation(project(":utils"))
+  implementation(rootProject)
   implementation(libs.plugin.detekt)
   implementation(libs.plugin.versions)
   implementation(libs.plugin.versions.update)
+  implementation(libs.plugin.nexus.publish)
+  implementation(libs.plugin.mkdocs)
   compileOnly(libs.plugin.kotlin)
 }
 

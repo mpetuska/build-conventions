@@ -18,8 +18,10 @@ plugin-git-hooks = "org.danilopianini:gradle-pre-commit-git-hooks:2.0.9"
 plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 plugin-kotlin-serialization = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
 plugin-ksp = { module = "com.google.devtools.ksp:symbol-processing-gradle-plugin", version.ref = "ksp" }
+plugin-nexus-publish = "io.github.gradle-nexus:publish-plugin:2.0.0"
 plugin-versions = { module = "com.github.ben-manes:gradle-versions-plugin", version.ref = "versions" }
 plugin-versions-update = { module = "nl.littlerobots.vcu:plugin", version.ref = "versions-update" }
+plugin-mkdocs = "ru.vyarus:gradle-mkdocs-plugin:4.0.1"
 
 [plugins]
 build-konfig = "com.github.gmazzo.buildconfig:5.4.0"

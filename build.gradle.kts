@@ -2,10 +2,14 @@ import io.gitlab.arturbosch.detekt.Detekt
 
 plugins {
   `kotlin-dsl` apply false
-  `embedded-kotlin` apply false
+  `embedded-kotlin`
   alias(libs.plugins.versions)
   alias(libs.plugins.versions.update)
   alias(libs.plugins.detekt)
+}
+
+repositories {
+  mavenCentral()
 }
 
 versionCatalogUpdate {
@@ -18,6 +22,8 @@ versionCatalogUpdate {
 
 dependencies {
   detektPlugins(libs.detekt.formatting)
+  implementation(gradleApi())
+  implementation(libs.plugin.kotlin)
 }
 
 tasks {
