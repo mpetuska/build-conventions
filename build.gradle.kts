@@ -31,5 +31,13 @@ tasks {
     config.from(rootDir.resolve("gradle/detekt.yml"))
     parallel = true
     buildUponDefaultConfig = true
+    kotlin.sourceSets.all {
+      source(kotlin)
+    }
+    source(layout.projectDirectory.file("build.gradle.kts"))
+    source(layout.projectDirectory.file("settings.gradle.kts"))
+
+    include("**/*.kt")
+    include("**/*.kts")
   }
 }

@@ -7,7 +7,6 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinAndroidTarget
 import org.jetbrains.kotlin.gradle.targets.jvm.KotlinJvmTarget
 import org.jetbrains.kotlin.konan.target.KonanTarget
 
-
 private val blockingKonanTargets: Set<KonanTarget> = setOf(
   KonanTarget.ANDROID_ARM32,
   KonanTarget.ANDROID_ARM64,
@@ -31,12 +30,13 @@ private val blockingKonanTargets: Set<KonanTarget> = setOf(
   KonanTarget.WATCHOS_X64,
 )
 
+@Suppress("UnusedPrivateMember")
 private fun KotlinTarget.isBlocking(): Boolean = (this is KonanTarget && this in blockingKonanTargets) ||
   this is KotlinJvmTarget ||
   this is KotlinAndroidTarget
 
 /**
- * Register all targets with with blocking coroutines capabilities.
+ * Register all targets with blocking coroutines capabilities.
  */
 fun KotlinMultiplatformExtension.blockingTargets(config: Action<KotlinTarget> = Action {}) {
   setOf(

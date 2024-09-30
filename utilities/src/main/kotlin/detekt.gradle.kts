@@ -1,5 +1,6 @@
-import konfig.utils.Libs
 import io.gitlab.arturbosch.detekt.Detekt
+import konfig.utils.Libs
+import org.jetbrains.kotlin.gradle.dsl.KotlinJvmProjectExtension
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 
 plugins {
@@ -25,6 +26,13 @@ tasks {
             source(kotlin)
           }
         }
+        pluginManager.withPlugin("org.jetbrains.kotlin.jvm") {
+          project.the<KotlinJvmProjectExtension>().sourceSets.all {
+            source(kotlin)
+          }
+        }
+        source(layout.projectDirectory.file("build.gradle.kts"))
+        source(layout.projectDirectory.file("settings.gradle.kts"))
       }
       project.addSources()
       subprojects.forEach {
