@@ -1,8 +1,8 @@
 [versions]
 android = "8.5.0"
-detekt = "1.23.6"
+detekt = "1.23.7"
 kotlin = "2.0.20"
-ksp = "2.0.20-1.0.24"
+ksp = "2.0.20-1.0.25"
 versions = "0.51.0"
 versions-update = "0.8.4"
 
@@ -13,18 +13,18 @@ koin-bom = "io.insert-koin:koin-bom:4.0.0-RC1"
 koin-compiler = { module = "io.insert-koin:koin-ksp-compiler" }
 plugin-android-library = { module = "com.android.tools.build:gradle", version.ref = "android" }
 plugin-detekt = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
-plugin-develocity = "com.gradle:develocity-gradle-plugin:3.18"
-plugin-git-hooks = "org.danilopianini:gradle-pre-commit-git-hooks:2.0.9"
+plugin-develocity = "com.gradle:develocity-gradle-plugin:3.18.1"
+plugin-git-hooks = "org.danilopianini:gradle-pre-commit-git-hooks:2.0.13"
 plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 plugin-kotlin-serialization = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
 plugin-ksp = { module = "com.google.devtools.ksp:symbol-processing-gradle-plugin", version.ref = "ksp" }
+plugin-mkdocs = "ru.vyarus:gradle-mkdocs-plugin:4.0.1"
 plugin-nexus-publish = "io.github.gradle-nexus:publish-plugin:2.0.0"
 plugin-versions = { module = "com.github.ben-manes:gradle-versions-plugin", version.ref = "versions" }
 plugin-versions-update = { module = "nl.littlerobots.vcu:plugin", version.ref = "versions-update" }
-plugin-mkdocs = "ru.vyarus:gradle-mkdocs-plugin:4.0.1"
 
 [plugins]
-build-konfig = "com.github.gmazzo.buildconfig:5.4.0"
+build-konfig = "com.github.gmazzo.buildconfig:5.5.0"
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 versions = { id = "com.github.ben-manes.versions", version.ref = "versions" }
