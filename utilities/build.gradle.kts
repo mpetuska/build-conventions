@@ -13,8 +13,9 @@ dependencies {
   implementation(libs.plugin.detekt)
   implementation(libs.plugin.versions)
   implementation(libs.plugin.versions.update)
-  implementation(libs.plugin.nexus.publish)
+  implementation(libs.plugin.maven.deployer)
   implementation(libs.plugin.mkdocs)
+  implementation(libs.plugin.dokkatoo)
   compileOnly(libs.plugin.kotlin)
 }
 
