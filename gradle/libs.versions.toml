@@ -1,10 +1,10 @@
 [versions]
-android = "8.5.0"
+android = "8.7.1"
 detekt = "1.23.7"
-kotlin = "2.0.20"
-ksp = "2.0.20-1.0.25"
+kotlin = "2.0.21"
+ksp = "2.0.21-1.0.26"
 versions = "0.51.0"
-versions-update = "0.8.4"
+versions-update = "0.8.5"
 
 [libraries]
 detekt-formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
@@ -14,15 +14,15 @@ koin-compiler = { module = "io.insert-koin:koin-ksp-compiler" }
 plugin-android-library = { module = "com.android.tools.build:gradle", version.ref = "android" }
 plugin-detekt = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
 plugin-develocity = "com.gradle:develocity-gradle-plugin:3.18.1"
+plugin-dokkatoo = "dev.adamko.dokkatoo:dokkatoo-plugin:2.4.0"
 plugin-git-hooks = "org.danilopianini:gradle-pre-commit-git-hooks:2.0.13"
 plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 plugin-kotlin-serialization = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
 plugin-ksp = { module = "com.google.devtools.ksp:symbol-processing-gradle-plugin", version.ref = "ksp" }
+plugin-maven-deployer = "io.deepmedia.tools.deployer:deployer:0.15.0"
 plugin-mkdocs = "ru.vyarus:gradle-mkdocs-plugin:4.0.1"
-plugin-maven-deployer="io.deepmedia.tools.deployer:deployer:0.15.0"
 plugin-versions = { module = "com.github.ben-manes:gradle-versions-plugin", version.ref = "versions" }
 plugin-versions-update = { module = "nl.littlerobots.vcu:plugin", version.ref = "versions-update" }
-plugin-dokkatoo = "dev.adamko.dokkatoo:dokkatoo-plugin:2.3.1"
 
 [plugins]
 build-konfig = "com.github.gmazzo.buildconfig:5.5.0"
