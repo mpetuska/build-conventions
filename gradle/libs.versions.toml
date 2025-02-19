@@ -1,9 +1,9 @@
 [versions]
-android = "8.7.3"
+android = "8.8.1"
 detekt = "1.23.7"
-kotlin = "2.1.0"
-ksp = "2.1.0-1.0.29"
-versions = "0.51.0"
+kotlin = "2.1.10"
+ksp = "2.1.10-1.0.30"
+versions = "0.52.0"
 versions-update = "0.8.5"
 
 [libraries]
@@ -13,9 +13,9 @@ koin-bom = "io.insert-koin:koin-bom:4.0.0-RC1"
 koin-compiler = { module = "io.insert-koin:koin-ksp-compiler" }
 plugin-android-library = { module = "com.android.tools.build:gradle", version.ref = "android" }
 plugin-detekt = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
-plugin-develocity = "com.gradle:develocity-gradle-plugin:3.19"
+plugin-develocity = "com.gradle:develocity-gradle-plugin:3.19.2"
 plugin-dokkatoo = "dev.adamko.dokkatoo:dokkatoo-plugin:2.4.0"
-plugin-git-hooks = "org.danilopianini:gradle-pre-commit-git-hooks:2.0.18"
+plugin-git-hooks = "org.danilopianini:gradle-pre-commit-git-hooks:2.0.20"
 plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 plugin-kotlin-serialization = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
 plugin-ksp = { module = "com.google.devtools.ksp:symbol-processing-gradle-plugin", version.ref = "ksp" }
